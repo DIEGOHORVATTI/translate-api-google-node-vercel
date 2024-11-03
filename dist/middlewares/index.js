@@ -5,7 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 _export_star(require("./exception"), exports);
 _export_star(require("./notFound"), exports);
 _export_star(require("./endpoint"), exports);
-_export_star(require("./jwt"), exports);
 _export_star(require("./exceptionValidation"), exports);
 function _export_star(from, to) {
     Object.keys(from).forEach(function(k) {

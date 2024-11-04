@@ -1,53 +1,86 @@
-# Auth-TS
+# Translate Google API V1
 
-JWT Authentication Using TypeScript, Express.js, & MongoDB
+This project is a simple implementation of the Google Translate API using Node.js and Express, deployed on Vercel. It allows users to translate text between multiple languages effortlessly.
 
-## Features:
+## Features
 
-- Authentication
+- Free and unlimited access to the Google Translate API
+- Automatic language detection
+- Simple RESTful API for text translation
+- Easy deployment and scalability using Vercel
 
-## Technology Stack:
+## Getting Started
 
-- TypeScript
-- Node.js
-- Express.js
-- MongoDB
-- JWT
+### Installation
 
-## Default urls:
+1. Clone the repository:
 
-- Login User : POST METHOD <br/>
-  localhost:5000/api/auth
-- Register User : POST METHOD <br/>
-  localhost:5000/api/auth/register
-- Get All Users : GET METHOD <br/>
-  localhost:5000/api/auth/
+   <pre>
+   git clone https://github.com/yourusername/translate-google-api-v1.git
+   cd translate-google-api-v1
+   </pre>
 
-## Usage
+2. Install dependencies using Bun:
 
-### Env Variables
+   <pre>
+   bun install
+   </pre>
 
-Create a .env file in then root and add the following
+3. Start the application:
 
-```
-PORT = 5000
-MONGO_URI = your mongodb uri
-JWT_SECRET = 'abc123'
+   <pre>
+   bun dev
+   </pre>
 
-```
+Your API should now be running on [http://localhost:3000/translate](http://localhost:3000/translate).
 
-## Install Dependencies
+## How to Use the API
 
-```
-yarn
+You can use tools like Postman, curl, or any HTTP client to make requests to the API.
 
-```
+### Example Request
 
-## Run App
+To translate text, send a POST request to the `/translate` endpoint with the following JSON body:
 
-```
+**Request URL:**
 
-# Run in dev mode
+<pre>
+POST http://localhost:3000/translate
+</pre>
 
-yarn start
+**Example Request Body:**
 
+<pre>
+{
+  "text": "hello world",
+  "from": "en",  // Optional: Source language (use "auto" for automatic detection)
+  "to": "es"     // Target language
+}
+</pre>
+
+### Example Response
+
+You should receive a response similar to this:
+
+<pre>"hola mundo"</pre>
+
+## API Endpoint
+
+**POST /translate**
+
+If the `from` field is omitted, the API will automatically detect the source language.
+
+## Deployment
+
+This application is deployed on Vercel. You can access the live API at:
+
+[https://translate-google-api-v1.vercel.app/translate](https://translate-google-api-v1.vercel.app/translate)
+
+## Contributing
+
+Feel free to fork this repository and submit pull requests. Any contributions are welcome!
+
+## Acknowledgments
+
+- Thanks to Google for providing the Translate API.
+- Thanks to Vercel for easy deployment options.

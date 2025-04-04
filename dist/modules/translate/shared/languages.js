@@ -218,6 +218,7 @@ const langs = {
     sl: 'Slovenian',
     so: 'Somali',
     es: 'Spanish',
+    'es-AR': 'Spanish (Argentina)',
     su: 'Sundanese',
     sus: 'Susu',
     sw: 'Swahili',
